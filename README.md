@@ -13,7 +13,7 @@ This is a Django project with Django REST framework.
 
    ```
    git clone https://github.com/ImaneElhoumam/TestBOCI.git
-   cd boc_backend
+   cd TestBOCI
 
 
 2. **Build docker image:**
