@@ -1,4 +1,4 @@
-# Boc BackEnd Django
+# SEARCH Django PROJECT
 
 This is a Django project with Django REST framework.
 
