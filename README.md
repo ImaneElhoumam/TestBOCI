@@ -12,7 +12,7 @@ This is a Django project with Django REST framework.
 1. **Clone the repository:**
 
    ```
-   git clone https://github.com/said-grich/boc_backend.git
+   git clone https://github.com/ImaneElhoumam/TestBOCI.git
    cd boc_backend
 
 
