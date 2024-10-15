@@ -1,0 +1,56 @@
+
+{% load static %}
+{% include 'includes/head.html' %}
+
+  <body>
+   
+    {% include 'includes/header.html' %}
+
+    <div class="wrapper" style="width:900px;">
+      <div class="title">
+        <h1 style="font-family: 'Montserrat', sans-serif;">SEARCH SYSTEM</h1>
+      </div>
+      <div class="content">
+        <p> Tap tag or Text do you want to search</p>
+        <ul id="search-tags">
+          <input type="text" spellcheck="false">
+        </ul>
+      </div>
+      <div class="details">
+        <p><span>10</span> tags are remaining</p>
+        <button>Remove All</button>
+      </div>
+      <br>
+
+      <div class="file-uploader" style="width: 850px;">
+        <div class="uploader-header">
+          <h2 class="uploader-title">File Uploader</h4>
+          <h4 class="file-completed-status"></h4>
+        </div>
+        <ul class="file-list"></ul>
+        <div class="file-upload-box">
+          <h2 class="box-title">
+            <span class="file-instruction">Drag files here or</span>
+            <span class="file-browse-button">browse</span>
+          </h2>
+          <input class="file-browse-input" type="file" multiple hidden accept=".pdf,.xlsx,.xls,.doc,.docx,.zip">
+
+        </div>
+      </div>
+
+      <br><br>
+      <div class="detail">
+        <button id="submit-button">SEARCH</button>
+        <button onclick="removeAllFiles()" style="background-color: #e22929;">Cancel</button>
+      </div>
+    </div>
+
+    {% include 'includes/footer.html' %}
+    <script src="{% static 'js/search.js' %}"></script>
+    <script src="{% static 'js/search_page.js' %}"></script>
+    <script src="{% static 'js/translate.js' %}"></script>
+
+    
+
+  </body>
+</html>
