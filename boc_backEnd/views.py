@@ -9,4 +9,8 @@ def profile_page(request):
     
     return render(request, 'profile.html')
 
+def Login1(request):
+    
+    return render(request, 'index.html')   
+
       
