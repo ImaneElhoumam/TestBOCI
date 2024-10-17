@@ -66,11 +66,15 @@
    <!-- Menu -->
    <div class="menu" style="text-align: left; margin: 20px 0;">
     <ul style="list-style-type: none; padding: 0;">
+      <a href="{% url 'profile_page'%}">
       <li style="margin-bottom: 10px;">
         <i class="fa-solid fa-gear"></i>&nbsp;<a href="#" style="color: #000000; text-decoration: none;">Profile Settings</a>
+      </a>
       </li>
       <li style="margin-bottom: 10px;">
+      <a href="{% url 'history_page' %}" >
         <i class="fa-solid fa-clock-rotate-left"></i>&nbsp;<a href="#" style="color: #000000; text-decoration: none;">Search History</a>
+      </a>
       </li>
       
     </ul>

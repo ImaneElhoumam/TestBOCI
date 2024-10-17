@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from rest_framework import generics, permissions, viewsets
 from accounts.serializers import PasswordResetSerializer, RegistrationSerializer, LoginSerializer, ProfileSerializer
 from rest_framework_simplejwt.tokens import RefreshToken
@@ -95,9 +95,9 @@ class PasswordResetView(APIView):
         
         if serializer.is_valid():
             serializer.save()
-            return Response({"message": "A new password has been sent to your email."}, status=status.HTTP_200_OK)
+            return redirect('/logine')
         
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return redirect('/forgetPassword')
 
 
 class LogoutView(APIView):
