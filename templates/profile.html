@@ -50,7 +50,7 @@
         <div class="profile-pic" style="position: relative; margin-bottom: 15px;">
           <img id="profileImage" src="https://via.placeholder.com/100" alt="Profile Picture" style="border-radius: 50%; width: 100px; height: 100px;">
           <!-- Bouton de modification d'image -->
-          <input type="file" id="imageUpload" style="display: none;" accept="image/*"onchange="previewImage(event)">
+          <input type="file" id="imageUpload" method="GET" style="display: none;" accept="image/*"onchange="previewImage(event)">
           <button onclick="document.getElementById('imageUpload').click()" style="position: absolute; bottom: 0; right: 0; background-color: #007BFF; color: white; border: none; border-radius: 50%; width: 25px; height: 25px; font-size: 12px; cursor: pointer;">✎</button>
         </div>
         
@@ -66,14 +66,12 @@
    <!-- Menu -->
    <div class="menu" style="text-align: left; margin: 20px 0;">
     <ul style="list-style-type: none; padding: 0;">
-      <a href="{% url 'profile_page'%}">
       <li style="margin-bottom: 10px;">
-        <i class="fa-solid fa-gear"></i>&nbsp;<a href="#" style="color: #000000; text-decoration: none;">Profile Settings</a>
+        <i class="fa-solid fa-gear"></i>&nbsp;<a href="{% url 'profile_page'%}" style="color: #000000; text-decoration: none;">Profile Settings
       </a>
       </li>
       <li style="margin-bottom: 10px;">
-      <a href="{% url 'history_page' %}" >
-        <i class="fa-solid fa-clock-rotate-left"></i>&nbsp;<a href="#" style="color: #000000; text-decoration: none;">Search History</a>
+        <i class="fa-solid fa-clock-rotate-left"></i>&nbsp;<a href="{% url 'history_page' %}" style="color: #000000; text-decoration: none;">Search History
       </a>
       </li>
       
