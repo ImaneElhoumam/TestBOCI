@@ -12,19 +12,19 @@
           </button>
     
           <div class="dropdown-content" id="myDropdown">
-            <a href="{% url 'profile_page'%}">
+            <a href="{% url 'profile_page'%}" data-i18n="profile">
               <!-- <span class="material-symbols-outlined"> cottage </span> -->
               <i class="fa-solid fa-user"></i> Profile
             </a>
-            <a href="{% url 'history_page'%}">
+            <a href="{% url 'history_page'%}" data-i18n="historic">
               <!-- <span class="material-symbols-outlined">category</span> -->
               <i class="fa-solid fa-clock-rotate-left"></i> Historic
             </a>
-            <a href="{% url 'search_page' %}" class="btn-back-to-search">
+            <a href="{% url 'search_page' %}" class="btn-back-to-search" data-i18n="back_to_search">
               <i class="fa-solid fa-arrow-left"></i> BACK TO SEARCH
           </a >
               <!-- <span class="material-symbols-outlined">donut_large</span> -->
-               <a onclick="logout()" href="#" >
+               <a onclick="logout()" href="#" data-i18n="logout"  >
               <i class="fa-solid fa-right-from-bracket" ></i> Logout
             </a>
             </div>
@@ -37,7 +37,7 @@
 <div class="wrapper" style="width:1200px;  display: flex; flex-direction: column;">
     <!-- Titre -->
     <div class="title" style="text-align: center; margin-bottom: 20px;">
-      <h1 style="font-family: 'Montserrat', sans-serif;">
+      <h1 data-i18n="edit_profile" style="font-family: 'Montserrat', sans-serif;">
         EDIT PROFILE
       </h1>
     </div>
@@ -55,7 +55,7 @@
         </div>
         
         <!-- Nom de l'utilisateur -->
-        <button id="savePictureButton" style="background-color: #007BFF; color: white; padding: 10px 20px; border: none; border-radius: 5px; margin-top: 10px;">Upload</button>
+        <button data-i18n="upload" id="savePictureButton" style="background-color: #007BFF; color: white; padding: 10px 20px; border: none; border-radius: 5px; margin-top: 10px;">Upload</button>
 
         <p><strong id="username"></strong></p>
         
@@ -79,39 +79,39 @@
   </div>
 <br><br><br>
         <!-- Bouton de déconnexion -->
-        <button onclick="logout()" style="background-color: #FF4B4B; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px;">
+        <button data-i18n="logout" onclick="logout()" style="background-color: #FF4B4B; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px;">
             <i  class="fa-solid fa-right-from-bracket"></i>&nbsp;LOGOUT
         </button>
       </div>
   
       <!-- Section droite (Contenu principal) -->
       <div class="right-section" style="width: 75%; background-color: #fff;  padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
-    <p style="margin-top: -1px;">
-      <i class="fa-regular fa-pen-to-square"></i>&nbsp;Update your profile details below.
+    <p data-i18n="update_profile" style="margin-top: -1px;">
+      <i  class="fa-regular fa-pen-to-square"></i>&nbsp;Update your profile details below.
         <p>
         
         <!-- Formulaire d'édition -->
         <div class="content">
           
-          <p>Change your Username</p>
-          <ul><input type="text" placeholder="username" id="usernameInput"></ul>
+          <p data-i18n="change_username">Change your Username</p>
+          <ul><input type="text" placeholder="username" id="usernameInput" data-i18n-placeholder="change_username"></ul>
   
-          <p>Change your Email</p>
+          <p  data-i18n="change_email">Change your Email</p>
           <ul><input type="text" placeholder="Email" id="emailInput"></ul>
   
-          <p>New Password</p>
-          <ul><input type="password" placeholder="New Password" id="passwordInput"></ul>
+          <p data-i18n="new_password">New Password</p>
+          <ul><input type="password" placeholder="New Password" id="passwordInput" data-i18n-placeholder="new_password"></ul>
   
-          <p>Confirm Password</p>
-          <ul><input type="password" placeholder="Confirm Password" id="confirmPasswordInput"></ul>
+          <p data-i18n="confirm_password">Confirm Password</p>
+          <ul><input type="password" placeholder="Confirm Password" id="confirmPasswordInput" data-i18n-placeholder="confirm_password"></ul>
         </div>
 
         <!-- Boutons -->
         <div class="detail" style="margin-top: 20px;">
            
-          <button type="submit" style="background-color: #007BFF; color: white; padding: 10px 20px; border: none; border-radius: 5px;">SAVE</button>
-          <button style="background-color: #cacaca; color: black; padding: 10px 20px; border: none; border-radius: 5px; margin-left: 10px;">
-            <a href="{% url 'search_page' %}" class="btn-back-to-search">
+          <button data-i18n="save" type="submit" style="background-color: #007BFF; color: white; padding: 10px 20px; border: none; border-radius: 5px;">SAVE</button>
+          <button data-i18n="back_to_search" style="background-color: #cacaca; color: black; padding: 10px 20px; border: none; border-radius: 5px; margin-left: 10px;">
+            <a  href="{% url 'search_page' %}" class="btn-back-to-search">
               <i class="fa-solid fa-arrow-left"></i> BACK TO SEARCH
           </a>          </button>
         </div>
