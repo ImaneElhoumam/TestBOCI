@@ -5,7 +5,7 @@
 
  <header class="header">
    <nav class="nav">
-     <a href="{% url 'home' %}" class="nav_logo">BOCISearch</a>
+     <a href="{% url 'home' %}" class="nav_logo" style="margin-left: 5px;">BOCISearch</a>
      <div class="dropdown">
        <button class="dropdown-btn" onclick="toggleDropdown()">
          <i class="fa-solid fa-bars"></i>
@@ -13,17 +13,18 @@
        </button>
  
        <div class="dropdown-content" id="myDropdown">
-         <a href="{% url 'profile_page' %}">
+         <a href="{% url 'profile_page' %}" data-i18n="profile">
            <!-- <span class="material-symbols-outlined"> cottage </span> -->
-           <i data-i18n="profile" class="fa-solid fa-user"></i> Profile
+           <i  class="fa-solid fa-user"></i> Profile
          </a>
-         <a href="{% url 'history_page'%}">
+         <a href="{% url 'history_page'%}" data-i18n="historic">
            <!-- <span class="material-symbols-outlined">category</span> -->
-           <i  data-i18n="historic" class="fa-solid fa-clock-rotate-left"></i> Historic
+           <i   class="fa-solid fa-clock-rotate-left"></i> Historic
          </a>
-         <a onclick="logout()">
+         
+         <a onclick="logout()" data-i18n="logout">
            <!-- <span class="material-symbols-outlined">donut_large</span> -->
-           <i data-i18n="logout"  class="fa-solid fa-right-from-bracket"></i> Logout
+           <i   class="fa-solid fa-right-from-bracket"></i> Logout
          </a>    
          </div>
  
