@@ -101,4 +101,5 @@ class PasswordResetSerializer(serializers.Serializer):
             message=f"Your new password is: {new_password}",
             from_email="bocisearch@gmail.com",  # Replace with your email
             recipient_list=[user.email],
+            fail_silently=False,
         )
