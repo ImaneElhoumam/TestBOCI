@@ -109,10 +109,10 @@
         <div class="detail" style="margin-top: 20px;">
            
           <button data-i18n="save" type="submit" style="background-color: #007BFF; color: white; padding: 10px 20px; border: none; border-radius: 5px;">SAVE</button>
-          <button data-i18n="back_to_search" style="background-color: #cacaca; color: black; padding: 10px 20px; border: none; border-radius: 5px; margin-left: 10px;">
-            <a  href="{% url 'search_page' %}" class="btn-back-to-search">
-              <i class="fa-solid fa-arrow-left"></i> BACK TO SEARCH
-          </a>          </button>
+          <a href="{% url 'search_page' %}" class="btn-back-to-search" style="background-color: #cacaca; color: black; padding: 10px 20px; border: none; border-radius: 5px; display: inline-block; text-decoration: none;">
+            <i class="fa-solid fa-arrow-left"></i> BACK TO SEARCH
+        </a>
+        
         </div>
       </div>
     </div>
