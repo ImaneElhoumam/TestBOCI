@@ -17,19 +17,22 @@ document.getElementById("resetPasswordForm").addEventListener("submit", function
         },
         body: data
     })
-    .then(response => response.json())
-    .then(result => {
-        // Display a success message if the request was successful
-        if (result.message) {
-            document.getElementById("message").innerHTML = `<p style="color:green;">${result.message}</p>`;
+    .then(response => {
+        // Handle successful response
+        if (response.ok) {
+            return response.json(); // Parse the JSON response
         } else {
-            // Handle errors (if any)
-            let errors = result.errors ? result.errors : result.detail;
-            document.getElementById("message").innerHTML = `<p style="color:red;">${errors}</p>`;
+            throw new Error('Failed to reset password'); // Handle error response
+        }
+    })
+    .then(result => {
+        // If the request was successful, redirect to the index.html page
+        if (result.message) {
+            window.location.href = "/logine/"; // Redirect to index.html after success
         }
     })
     .catch(error => {
-        // Handle any network or server errors
-        document.getElementById("message").innerHTML = `<p style="color:red;">An error occurred: ${error.message}</p>`;
+        // Handle errors and display them on the Forget Password page
+        document.getElementById("message").innerHTML = `<p style="color:red;">${error.message}</p>`;
     });
 });

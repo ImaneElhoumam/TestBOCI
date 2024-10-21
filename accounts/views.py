@@ -95,9 +95,10 @@ class PasswordResetView(APIView):
         
         if serializer.is_valid():
             serializer.save()
-            return redirect('/logine')
+            return Response({"message": "Password reset email sent successfully"}, status=200)
         
-        return redirect('/forgetPassword')
+        # Return errors if the request is invalid
+        return Response({"errors": serializer.errors}, status=400)
 
 
 class LogoutView(APIView):

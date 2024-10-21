@@ -47,12 +47,11 @@
   
     <div class="left-section" style="width: 22%; background-color: #f0f0f0; padding: 20px; border-radius: 8px; text-align: center;">
         <!-- Image de profil -->
-        <div class="profile-pic" style="position: relative; margin-bottom: 15px;">
-          <img id="profileImage" src="https://via.placeholder.com/100" alt="Profile Picture" style="border-radius: 50%; width: 100px; height: 100px;">
-          <!-- Bouton de modification d'image -->
-          <input type="file" id="imageUpload" method="GET" style="display: none;" accept="image/*"onchange="previewImage(event)">
-          <button onclick="document.getElementById('imageUpload').click()" style="position: absolute; bottom: 0; right: 0; background-color: #007BFF; color: white; border: none; border-radius: 50%; width: 25px; height: 25px; font-size: 12px; cursor: pointer;">✎</button>
-        </div>
+     <div class="profile-pic" style="position: relative; margin-bottom: 15px;">
+    <img id="profileImage" src="https://via.placeholder.com/100" alt="Profile Picture" style="border-radius: 50%; width: 100px; height: 100px;">
+    <input type="file" id="imageUpload" style="display: none;" accept="image/*" onchange="previewImage(event)">
+    <button onclick="document.getElementById('imageUpload').click()" style="position: absolute; bottom: 0; right: 0; background-color: #007BFF; color: white; border: none; border-radius: 50%; width: 25px; height: 25px; font-size: 12px; cursor: pointer;">✎</button>
+</div> 
         
         <!-- Nom de l'utilisateur -->
         <button data-i18n="upload" id="savePictureButton" style="background-color: #007BFF; color: white; padding: 10px 20px; border: none; border-radius: 5px; margin-top: 10px;">Upload</button>
